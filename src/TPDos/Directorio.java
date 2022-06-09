@@ -3,7 +3,7 @@ package TPDos;
 import java.util.*;
 
 public class Directorio {
-
+//atributos
   private TreeMap<Long, Cliente> agenda = new TreeMap();
 
   public boolean agregarCliente(Cliente cliente, long telefono) {
