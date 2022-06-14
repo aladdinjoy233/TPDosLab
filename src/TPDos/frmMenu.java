@@ -55,9 +55,19 @@ public class frmMenu extends javax.swing.JFrame {
         jMenu2.add(jMenuItem1);
 
         jMenuItem2.setText("Buscar Cliente");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem2);
 
         jMenuItem3.setText("Borrar Cliente");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem3);
 
         jMenuBar1.add(jMenu2);
@@ -87,6 +97,21 @@ public class frmMenu extends javax.swing.JFrame {
         escritorio.moveToFront(acv);
         escritorio.repaint();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        //borro ventana si es que la hay
+        escritorio.removeAll();  
+        BorrarCliente borrar = new BorrarCliente(agenda);
+        borrar.setVisible(true);
+        escritorio.add(borrar);
+        escritorio.moveToFront(borrar);
+        escritorio.repaint();
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
   /**
    * @param args the command line arguments

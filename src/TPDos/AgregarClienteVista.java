@@ -6,7 +6,6 @@
 package TPDos;
 
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author UltrabookSamsung
