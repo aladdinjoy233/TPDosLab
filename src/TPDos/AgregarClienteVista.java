@@ -49,33 +49,54 @@ public class AgregarClienteVista extends javax.swing.JInternalFrame {
         jbGuardar = new javax.swing.JButton();
         jbSalir = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 153, 0));
+        jLabel1.setFont(new java.awt.Font("Ebrima", 1, 20)); // NOI18N
         jLabel1.setText("Agregar Clientes");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("DNI");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("NOMBRE");
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("APELLIDO");
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("CIUDAD");
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("DOMICILIO");
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("TELEFONO");
 
-        jtDni.setText("jTextField1");
+        jtDni.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtDni.setText(" ");
+        jtDni.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtDniFocusLost(evt);
+            }
+        });
 
-        jtNombre.setText("jTextField2");
+        jtNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtNombre.setText(" ");
 
-        jtApellido.setText("jTextField3");
+        jtApellido.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtApellido.setText(" ");
 
-        jtCiudad.setText("jTextField4");
+        jtCiudad.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtCiudad.setText(" ");
 
-        jtDomicilio.setText("jTextField5");
+        jtDomicilio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtDomicilio.setText(" ");
 
-        jtTelefono.setText("jTextField6");
+        jtTelefono.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtTelefono.setText(" ");
+        jtTelefono.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtTelefonoFocusLost(evt);
+            }
+        });
 
         jbNuevo.setText("Nuevo");
         jbNuevo.addActionListener(new java.awt.event.ActionListener() {
@@ -103,74 +124,73 @@ public class AgregarClienteVista extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jtDni, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                                .addComponent(jtApellido)
+                                .addComponent(jtCiudad))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel1)))
+                        .addContainerGap(67, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
                         .addComponent(jbNuevo)
-                        .addGap(79, 79, 79)
+                        .addGap(71, 71, 71)
                         .addComponent(jbGuardar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbSalir))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(122, 122, 122)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel7))
-                                .addGap(27, 27, 27)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jtDni, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                                        .addComponent(jtApellido)
-                                        .addComponent(jtCiudad)
-                                        .addComponent(jtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jtDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 61, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jbSalir)
+                        .addGap(26, 26, 26))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jtDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jtCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jtCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jtDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jtDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbNuevo)
                     .addComponent(jbGuardar)
-                    .addComponent(jbSalir))
-                .addGap(0, 29, Short.MAX_VALUE))
+                    .addComponent(jbSalir)
+                    .addComponent(jbNuevo))
+                .addGap(21, 21, 21))
         );
 
         pack();
@@ -191,28 +211,119 @@ public class AgregarClienteVista extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jbNuevoActionPerformed
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
+        if(camposRellenados()){
+            Long dni = Long.parseLong(jtDni.getText());
+            String nombre = jtNombre.getText();
+            String apellido = jtApellido.getText();
+            String ciudad = jtCiudad.getText();
+            String direccion = jtDomicilio.getText();
+            Long telefono = Long.parseLong(jtTelefono.getText());
         
-         Long dni = Long.parseLong(jtDni.getText());
-         String nombre = jtNombre.getText();
-         String apellido = jtApellido.getText();
-         String ciudad = jtCiudad.getText();
-         String direccion = jtDomicilio.getText();
-         Long telefono = Long.parseLong(jtTelefono.getText());
+            Cliente cliente = new Cliente(dni,nombre,apellido,ciudad,direccion);
          
-         Cliente cliente = new Cliente(dni,nombre,apellido,ciudad,direccion);
+            if (agenda.agregarCliente(cliente, telefono)){
+            
+               JOptionPane.showMessageDialog(this, "Cliente agregado con éxito");
+            }else{
+               JOptionPane.showMessageDialog(this, "Ese teléfono ya existe");
+            }
          
-         if (agenda.agregarCliente(cliente, telefono)){
-             
-             JOptionPane.showMessageDialog(this, "Cliente agregado con exito");
-         }else{
-             JOptionPane.showMessageDialog(this, "Ese telefono ya existe");
-         }
+        limpiarCampos();
+        }
+         
     }//GEN-LAST:event_jbGuardarActionPerformed
 
     private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
         dispose();
     }//GEN-LAST:event_jbSalirActionPerformed
 
+    private boolean dniCorrecto = false;
+    private void jtDniFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtDniFocusLost
+        try{ 
+            long dni = Long.parseLong(jtDni.getText());
+            dniCorrecto = true;
+        } catch(NumberFormatException n){
+            JOptionPane.showMessageDialog(this, "Debe ingresar su DNI");
+            jtDni.requestFocus();
+            dniCorrecto = false;
+        }
+    }//GEN-LAST:event_jtDniFocusLost
+
+    private boolean telefonoCorrecto = false;
+    private void jtTelefonoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtTelefonoFocusLost
+        try{ 
+            long telefono = Long.parseLong(jtTelefono.getText());
+            telefonoCorrecto = true;
+        } catch(NumberFormatException n){
+            JOptionPane.showMessageDialog(this, "Debe ingresar su teléfono");
+            jtTelefono.requestFocus();
+            telefonoCorrecto = false;
+        }
+    }//GEN-LAST:event_jtTelefonoFocusLost
+    
+    private boolean verificarDni(){
+        if(!dniCorrecto){
+            JOptionPane.showMessageDialog(jtDni, "Debe ingresar su DNI");
+            jtDni.requestFocus();
+            return false;
+        } else{
+            return true;
+        }
+    }
+    
+    private boolean verificarTelefono(){
+        if(!telefonoCorrecto){
+            JOptionPane.showMessageDialog(jtTelefono, "Debe ingresar su telefono");
+            jtTelefono.requestFocus();
+            return false;
+        } else{
+            return true;
+        }
+    }
+    
+    private boolean verificarNombre(){
+        if(jtNombre.getText().length() > 1){
+            return true;
+        } else{
+            JOptionPane.showMessageDialog(jtNombre, "Debe ingresar su nombre");
+            jtNombre.requestFocus();
+            return false;
+        }
+    }
+    
+    private boolean verificarApellido(){
+        if(jtApellido.getText().length() > 1){
+            return true;
+        } else{
+            JOptionPane.showMessageDialog(jtApellido, "Debe ingresar su apellido");
+            jtApellido.requestFocus();
+            return false;
+        }
+    }
+    
+    private boolean verificarCiudad(){
+        if(jtCiudad.getText().length() > 1){
+            return true;
+        } else{
+            JOptionPane.showMessageDialog(jtCiudad, "Debe ingresar su ciudad");
+            jtCiudad.requestFocus();
+            return false;
+        }
+    }
+    
+    private boolean verificarDomicilio(){
+        if(jtDomicilio.getText().length() > 1){
+            return true;
+        } else{
+            JOptionPane.showMessageDialog(jtDomicilio, "Debe ingresar su domicilio");
+            jtDomicilio.requestFocus();
+            return false;
+        }
+    }
+    
+    private boolean camposRellenados(){
+        return verificarNombre() && verificarApellido() && verificarCiudad() && verificarDomicilio() && verificarDni() && verificarTelefono();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
